@@ -15,7 +15,7 @@ mkdir -p /var/opt/puppetlabs/puppet
 if [ -n "${PUPPET_NFS}" ]; then
   # Mount NFS share if PUPPET_NFS set
   echo "Mounting PE via NFS..."
-  mount -o ro -t nfs "${PUPPET_NFS}/${TEMPLATE}" /opt/puppet
+  mount -o ro -t nfs "${PUPPET_NFS}" /opt/puppet
 elif [ -n "${PE_URL}" ]; then
   # Install PE via tarball download if PE_URL set
   echo "Installing PE via tarball..."
